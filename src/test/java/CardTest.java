@@ -4,7 +4,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class CardTest {
-    Card card;
+
+    public Card card;
 
     @Before
     public void before() {
@@ -15,4 +16,16 @@ public class CardTest {
     public void canGetSuit() {
         assertEquals(SuitType.HEARTS, card.getSuit());
     }
+
+    @Test
+    public void canGetRank(){
+        assertEquals(RankType.FOUR, card.getRank());
+    }
+
+    @Test
+    public void canGetValue(){
+        assertEquals(4, card.getValueFromEnum());
+    }
+
+
 }
