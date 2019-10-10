@@ -29,4 +29,10 @@ public class Deck {
     public void shuffleCards() {
         Collections.shuffle(cards);
     }
+
+    public void dealCard(Player player){
+        Card dealtCard = cards.get(0);
+        cards.remove(dealtCard);
+        player.addCard(dealtCard);
+    }
 }
