@@ -27,6 +27,14 @@ public class DeckTest {
         assertEquals(52, deck.cardCount());
     }
 
-    
+    @Test
+    public void canShuffleDeck(){
+        deck.addToDeck();
+        Card unshuffledCard = deck.getCard();
+        deck.shuffleCards();
+        Card shuffledCard = deck.getCard();
+        Boolean compareCards = (unshuffledCard  == shuffledCard);
+        assertEquals(false, compareCards);
+    }
 
 }
